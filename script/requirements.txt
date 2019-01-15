@@ -1,3 +1,4 @@
+pip==18.1
 alembic==0.8.10
 google-cloud-pubsub==0.39.1
 grequests==0.3.0
