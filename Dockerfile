@@ -58,9 +58,9 @@ RUN set -ex \
     && pip install pyasn1 \
     && pip install apache-airflow[crypto,celery,postgres,hive,jdbc,mysql,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} \
     && pip install 'redis>=2.10.5,<3' \
-    && pip install google-cloud-pubsub 0.39.1 \
-    && pip install grequests 0.3.0 \
-    && pip install google-cloud-bigquery 1.8.1 \
+    && pip install google-cloud-pubsub  \
+    && pip install grequests \
+    && pip install google-cloud-bigquery \
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
     && apt-get purge --auto-remove -yqq $buildDeps \
     && apt-get autoremove -yqq --purge \
