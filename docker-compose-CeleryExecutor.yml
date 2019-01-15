@@ -33,6 +33,8 @@ services:
             - ./dags:/usr/local/airflow/dags
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
+            - ./requirements.txt:/usr/local/airflow/requirements.txt
+            - ./script:/usr/local/airflow/script
         ports:
             - "8080:8080"
         command: webserver
